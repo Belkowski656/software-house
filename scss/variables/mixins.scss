@@ -1,0 +1,21 @@
+@mixin btn($color) {
+    background-color: transparent;
+    font-size: $font-standard;
+    font-family: 'open-sans';
+    color: $color;
+    padding: 10px 35px;
+    border: 1px solid $color;
+    margin: 25px;
+    outline-color: $color;
+    outline-style: solid;
+    outline-offset: -8px;
+    outline-width: 1px;
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover {
+        background-color: $orange;
+        outline-offset: 3px;
+        color: white;
+    }
+}
