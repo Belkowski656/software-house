@@ -1,0 +1,45 @@
+.header {
+
+    &__line {
+        text-align: center;
+        padding: 10px 0;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (min-width:400px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: $padding-mobile;
+        }
+
+        @media (min-width:823px) {
+            padding: 15px 20px;
+        }
+    }
+
+    &__logo-link {
+        text-decoration: none;
+        color: $orange;
+        font-size: 20px;
+
+        @media (min-width:823px) {
+            font-size: 24px;
+        }
+    }
+
+    &__phone {
+        color: #666;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+
+        @media (min-width:400px) {
+            margin: 0;
+        }
+
+        @media (min-width:823px) {
+            font-size: 22px;
+        }
+    }
+}
