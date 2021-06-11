@@ -82,6 +82,7 @@
         background-color: black;
         list-style: none;
         transition: .2s linear;
+        z-index: 1;
 
         @media (min-width:400px) {
             top: 89px;

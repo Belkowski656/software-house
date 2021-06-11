@@ -1,10 +1,14 @@
 .header {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     &__line {
         text-align: center;
         padding: 10px 0;
         max-width: 1200px;
         margin: 0 auto;
+        background-color: white;
 
         @media (min-width:400px) {
             display: flex;
@@ -42,4 +46,136 @@
             font-size: 22px;
         }
     }
+
+    &__main {
+        position: relative;
+        background-image: url(../../src/bg.jpg);
+        background-size: 265%;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: calc(105vh - 123px);
+
+        // @media (orientation:landscape) {
+        //     background-size: cover;
+        //     height: calc(100vh - 89px);
+        // }
+        @media (width:375px) {
+            background-size: cover;
+        }
+
+        @media (min-width:400px) {
+            height: calc(120vh - 89px);
+            background-size: cover;
+        }
+
+        @media (min-width:768px) {
+            background-size: 200%;
+        }
+
+        @media (min-width:900px) {
+            background-size: cover;
+        }
+
+        @media (min-width:1200px) {
+            background-size: 100%;
+            background-position: 0;
+        }
+
+        @media (min-width:1300px) {
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &__content {
+        color: white;
+        padding: 170px 20px 0;
+        text-align: center;
+
+        @media (width:280px) {
+            padding: 20px 20px 0;
+        }
+
+
+        @media (width:320px) {
+            padding: 120px 20px 0;
+        }
+
+        @media (min-width:400px) {
+            padding: 90px 20px 0;
+        }
+
+        @media (width:568px) and (orientation:landscape) {
+            padding: 20px 20px 0;
+        }
+
+        @media (min-width:768px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            padding: 0;
+            width: 550px;
+        }
+    }
+
+    &__title {
+        font-size: $font-big;
+        font-weight: normal;
+
+        @media (min-width:768px) {
+            font-weight: bold;
+        }
+    }
+
+    &__title--orange {
+        color: $orange;
+    }
+
+    &__text {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        @include btn(white);
+    }
+
+    &__clouds {
+        position: absolute;
+        bottom: -2%;
+        left: 0;
+        background-image: url(../../src/shape-bottom.png);
+        height: 119px;
+        width: 1920px;
+        animation: clouds 20s linear infinite;
+        overflow-y: hidden;
+
+        @media (width:280px) {
+            bottom: 5%;
+        }
+
+        @media (min-width:768px) {
+            bottom: 9%
+        }
+
+        @media (min-width:1024px) {
+            bottom: -1%
+        }
+    }
+
+    @keyframes clouds {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: 1920px;
+        }
+    }
 }
+
+// body {
+//     background-color: black;
+// }
