@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/style.scss",
+        "../scss/basic/reset.scss",
+        "../scss/variables/variables-main.scss",
+        "../scss/variables/mixins.scss",
+        "../scss/variables/variables.scss",
+        "../scss/layouts/layouts-main.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
