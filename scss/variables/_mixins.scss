@@ -18,3 +18,18 @@
         color: white;
     }
 }
+
+@mixin heading($color) {
+    color: $color;
+    font-size: $font-medium;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &>span {
+        border-bottom: 2px solid $orange;
+        padding-bottom: 10px;
+    }
+}
