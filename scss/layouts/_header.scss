@@ -50,42 +50,11 @@
     &__main {
         position: relative;
         background-image: url(../../src/bg.jpg);
-        background-size: 265%;
+        background-size: cover;
         background-position: center 0;
         background-repeat: no-repeat;
         width: 100%;
-        height: calc(105vh - 123px);
-
-        // @media (orientation:landscape) {
-        //     background-size: cover;
-        //     height: calc(100vh - 89px);
-        // }
-        @media (width:375px) {
-            background-size: cover;
-        }
-
-        @media (min-width:400px) {
-            height: calc(120vh - 89px);
-            background-size: cover;
-        }
-
-        @media (min-width:768px) {
-            background-size: 200%;
-        }
-
-        @media (min-width:900px) {
-            background-size: cover;
-        }
-
-        @media (min-width:1200px) {
-            background-size: 100%;
-            background-position: 0;
-        }
-
-        @media (min-width:1300px) {
-            background-size: cover;
-            background-position: center;
-        }
+        height: 100vh;
     }
 
     &__content {
@@ -144,25 +113,13 @@
 
     &__clouds {
         position: absolute;
-        bottom: -2%;
+        bottom: 0;
         left: 0;
         background-image: url(../../src/shape-bottom.png);
         height: 119px;
         width: 1920px;
         animation: clouds 20s linear infinite;
         overflow-y: hidden;
-
-        @media (width:280px) {
-            bottom: 5%;
-        }
-
-        @media (min-width:768px) {
-            bottom: 9%
-        }
-
-        @media (min-width:1024px) {
-            bottom: -1%
-        }
     }
 
     @keyframes clouds {
@@ -175,7 +132,3 @@
         }
     }
 }
-
-// body {
-//     background-color: black;
-// }
