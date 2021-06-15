@@ -1,0 +1,112 @@
+.speciality {
+    margin: 100px 20px 50px;
+
+    &__heading {
+        @include heading($orange);
+        margin-bottom: 50px;
+    }
+
+    &__box-food {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__food {
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 45px 25px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+
+        @media (min-width:768px) {
+            width: 49%;
+        }
+    }
+
+    &__food:nth-child(1) {
+        background-image: url(../../src/img1.jpg);
+
+    }
+
+    &__food:nth-child(2) {
+        background-image: url(../../src/img2.jpg);
+
+    }
+
+    &__food:nth-child(3) {
+        background-image: url(../../src/img3.jpg);
+
+    }
+
+    &__food:nth-child(4) {
+        background-image: url(../../src/img4.jpg);
+
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &__discount {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    &__btn {
+        @include btn(white);
+        padding: 10px 20px;
+    }
+
+    //features
+
+    &__box-features {
+        max-width: 1200px;
+        margin: 100px auto 0;
+        margin-top: 80px;
+        color: $gray-second;
+
+        @media (min-width:576px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__feature {
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 30px;
+
+        i {
+            color: $orange;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width:576px) {
+            width: 50%;
+        }
+
+        @media (min-width:992px) {
+            width: 25%;
+        }
+    }
+
+    &__feature-name {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 12px;
+    }
+}
