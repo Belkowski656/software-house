@@ -28,7 +28,6 @@ gsap.from(aboutBox.children, {
 gsap.from(imgBox.children, {
     x: '+=100',
     opacity: 0,
-    stagger: .1,
     duration: 1,
     ease: 'easeInOut',
     scrollTrigger: {
@@ -37,17 +36,17 @@ gsap.from(imgBox.children, {
     }
 });
 
-gsap.from(imgBox.children, {
-    x: '+=100',
-    opacity: 0,
-    stagger: .1,
-    duration: 1,
-    ease: 'easeInOut',
-    scrollTrigger: {
-        trigger: imgBox,
-        start: 'center 90%',
-    }
-});
+// gsap.from(imgBox.children, {
+//     x: '+=100',
+//     opacity: 0,
+//     stagger: .1,
+//     duration: 1,
+//     ease: 'easeInOut',
+//     scrollTrigger: {
+//         trigger: imgBox,
+//         start: 'center 90%',
+//     }
+// });
 
 chefs.forEach(chef => {
     gsap.from(chef, {
