@@ -1,0 +1,60 @@
+.newsletter {
+    padding-bottom: 50px;
+
+    &__box {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__form {
+        position: relative;
+        width: 300px;
+        margin: 30px auto;
+        max-width: 600px;
+
+        @media (min-width:576px) {
+            width: auto;
+        }
+    }
+
+    &__input {
+        padding: 10px;
+        font-size: 14px;
+        border: none;
+        box-shadow: 0 0 10px 1px gray;
+        border-radius: 50px;
+        height: 40px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        border: none;
+        background-color: $orange;
+        padding: 5px 20px;
+        border-radius: 40px;
+        color: white;
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($orange, 20%)
+        }
+    }
+}
