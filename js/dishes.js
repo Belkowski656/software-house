@@ -52,6 +52,7 @@ const show = (dishesToShow) => {
     dishesToShow.forEach(dish => {
         const div = document.createElement('div');
         div.classList.add('dishes__dish');
+        div.classList.add('active-dish');
         div.innerHTML =
             ` <div class="dishes__img" style="background-image: url(${dish.dishPhoto})"><div/>
             <p class="dishes__dish-name">${dish.dishName}</p>`;
