@@ -1,35 +1,47 @@
-@mixin btn($color) {
-    background-color: transparent;
-    font-size: $font-standard;
-    font-family: 'open-sans';
-    color: $color;
-    padding: 10px 35px;
-    border: 1px solid $color;
-    outline-color: $color;
-    outline-style: solid;
-    outline-offset: -8px;
-    outline-width: 1px;
+@mixin btn {
+    background-color: $blue;
+    font-size: $font-small;
+    border: 2px solid $blue;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    transition: .2s ease;
+    transition: .3s linear;
 
     &:hover {
-        background-color: $orange;
-        outline-offset: 3px;
-        color: white;
+        background-color: transparent;
+        border-color: white;
     }
 }
 
-@mixin heading($color) {
-    color: $color;
-    font-size: $font-medium;
+@mixin title($color) {
+    position: relative;
+    font-size: 26px;
     text-align: center;
-    border-bottom: 2px solid gray;
-    padding-bottom: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
 
-    &>span {
-        border-bottom: 2px solid $orange;
-        padding-bottom: 10px;
+    &::after {
+        position: absolute;
+        left: 50%;
+        bottom: -25%;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: $color;
+    }
+}
+
+@mixin sub-title($color) {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+
+    &::after {
+        position: absolute;
+        left: 50%;
+        bottom: -25%;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: $color;
     }
 }
