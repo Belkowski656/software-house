@@ -1,19 +1,117 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 20px;
-    padding: 15px 0;
+    @media (min-width:1200px) {
+        background-color: rgba(0, 0, 0, .2);
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 45px;
+            width: 1920px;
+            height: 1px;
+            background-color: $gray;
+        }
+    }
+
+
+    &__container {
+        max-width: 1750px;
+        margin: 0 auto;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 20px;
+        padding: 15px 0;
+    }
+
+    &__line {
+        display: none;
+
+        @media (min-width:1200px) {
+            position: relative;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .nav__addresses {
+            display: flex;
+            font-size: $font-small;
+        }
+
+        .nav__address {
+            margin-right: 20px;
+
+            i {
+                margin-right: 2px;
+            }
+        }
+
+        .nav__address:nth-child(1),
+        .nav__address:nth-child(2) {
+            cursor: pointer;
+
+            &:hover {
+                color: $blue-second;
+            }
+
+        }
+
+        .nav__socials {
+            i {
+                margin-left: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $blue-second;
+                }
+            }
+        }
+    }
 
     &__logo {
         font-size: 24px;
         font-weight: bold;
         color: $gray;
+
+        @media (min-width:1200px) {
+            color: white;
+        }
+    }
+
+    &__phone {
+        display: none;
+
+        @media (min-width:1200px) {
+            display: block;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                color: $blue-second;
+            }
+
+            i {
+                color: $blue-second;
+                margin-right: 10px;
+                font-size: 20px;
+            }
+        }
     }
 
     &__burger {
         font-size: 30px;
         color: $gray;
+        cursor: pointer;
+
+        @media (min-width:1200px) {
+            display: none;
+        }
     }
 
     &__menu {
@@ -27,6 +125,16 @@
         transform: translateX(-100%);
         z-index: 2;
         transition: .3s linear;
+        overflow-y: scroll;
+
+        @media (min-width:1200px) {
+            position: static;
+            width: auto;
+            height: auto;
+            overflow-y: unset;
+            background-color: transparent;
+            transform: translateX(0);
+        }
     }
 
     &__menu--active {
@@ -38,12 +146,21 @@
         font-weight: bold;
         color: $gray;
         line-height: 76px;
+
+        @media (min-width:1200px) {
+            display: none;
+        }
     }
 
 
     &__list {
         list-style: none;
         margin-top: 20px;
+
+        @media (min-width:1200px) {
+            display: flex;
+            margin: 0;
+        }
     }
 
     &__link {
@@ -55,6 +172,18 @@
 
         &:hover {
             color: $blue-second;
+        }
+
+        @media (min-width:1200px) {
+            color: white;
+            margin-right: 20px;
+            font-size: 20px;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: white;
+                border-color: $blue-second;
+            }
         }
     }
 }
