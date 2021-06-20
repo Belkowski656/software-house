@@ -1,6 +1,13 @@
 .nav {
+    max-width: 1920px;
+
     @media (min-width:1200px) {
         background-color: rgba(0, 0, 0, .2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
 
         &::after {
             position: absolute;
@@ -11,6 +18,11 @@
             height: 1px;
             background-color: $gray;
         }
+    }
+
+    @media (min-width:1920px) {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 
