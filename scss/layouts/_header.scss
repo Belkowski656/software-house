@@ -8,6 +8,10 @@
         height: 98vh;
     }
 
+    @media (min-width:1400px) {
+        height: 90vh;
+    }
+
     &__img-bg {
         position: absolute;
         top: 0;
@@ -22,12 +26,24 @@
         }
 
         @media (min-width:768px) {
-            width: 120%;
+            width: 165%;
+            height: auto;
         }
 
         @media (min-width:992px) {
-            width: 140%;
+            width: 250%;
+            height: auto;
             transform: translate(-20%, -20%);
+        }
+
+        @media (min-width:1200px) {
+            width: 120%;
+            height: auto;
+            transform: translate(0);
+        }
+
+        @media (min-width:1400px) {
+            width: 100%;
         }
     }
 
@@ -50,8 +66,8 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-color: darkcyan;
-        opacity: .5;
+        background-color: black;
+        opacity: .7;
     }
 
     &__box {
