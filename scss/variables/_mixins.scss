@@ -22,11 +22,12 @@
     &::after {
         position: absolute;
         left: 50%;
-        bottom: -25%;
+        bottom: -40%;
         content: "";
         width: 30px;
         height: 3px;
         background-color: $color;
+        transform: translateX(-50%);
     }
 }
 
@@ -38,10 +39,11 @@
     &::after {
         position: absolute;
         left: 50%;
-        bottom: -25%;
+        bottom: -40%;
         content: "";
         width: 30px;
         height: 2px;
         background-color: $color;
+        transform: translateX(-50%);
     }
 }

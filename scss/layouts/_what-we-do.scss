@@ -1,0 +1,134 @@
+.what-we-do {
+    margin-top: 150px;
+    text-align: center;
+    padding: 0 25px;
+
+    &__icon {
+        color: $blue-second;
+        font-size: $font-big;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        @include title($blue-second);
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        font-size: $font-standard;
+        color: $gray;
+
+        @media (min-width:992px) {
+            padding: 0 650px;
+        }
+    }
+
+    &__box-wraper {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (min-width:576px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
+    }
+
+    &__box {
+        margin-bottom: 50px;
+
+        @media (min-width:576px) {
+            width: 45%;
+        }
+
+        @media (min-width:992px) {
+            width: 30%;
+        }
+    }
+
+    &__img {
+        position: relative;
+        height: 200px;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .3;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    &__box:nth-of-type(1) &__img {
+        background-image: url(../src/cloud.jpg);
+        margin-top: 120px;
+
+        @media (min-width:576px) {
+            margin: 0;
+        }
+
+        &::after {
+            background-color: darkcyan;
+        }
+    }
+
+    &__box:nth-of-type(2) &__img {
+        background-image: url(../src/health.jpg);
+
+        &::after {
+            background-color: lightcoral;
+        }
+    }
+
+    &__box:nth-of-type(3) &__img {
+        background-image: url(../src/cyber.jpg);
+
+        &::after {
+            background-color: darkviolet;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 20px 25px 0;
+        border-radius: 10px 10px 0 0;
+        z-index: 1;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    &__sub-title {
+        @include sub-title(gray);
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        font-size: $font-standard;
+        padding: 6px;
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        @include btn;
+        background-color: #fff;
+        color: black;
+
+        &:hover {
+            background-color: $blue;
+            border-color: $blue;
+        }
+    }
+}
