@@ -19,7 +19,19 @@
         color: $gray;
 
         @media (min-width:992px) {
-            padding: 0 650px;
+            padding: 0 200px;
+        }
+
+        @media (min-width:1200px) {
+            padding: 0 350px;
+        }
+
+        @media (min-width:1400px) {
+            padding: 0 450px;
+        }
+
+        @media (min-width:1600px) {
+            padding: 0 600px;
         }
     }
 

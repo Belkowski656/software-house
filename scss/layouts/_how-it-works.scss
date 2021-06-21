@@ -1,0 +1,111 @@
+.how-it-works {
+    background-color: #2c2f50;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+
+    &__box-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (min-width:576px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__box {
+        margin-bottom: 80px;
+
+        @media (min-width:576px) {
+            width: 45%;
+        }
+
+        @media (min-width:992px) {
+            width: 25%;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        background-color: $blue;
+        width: 90px;
+        height: 90px;
+        border-radius: 10px;
+        margin: 0 auto;
+
+        i {
+            line-height: 90px;
+            font-size: 42px;
+            color: white;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $blue-second;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 30px;
+        }
+
+    }
+
+    &__box:nth-child(1) &__icon {
+        &::after {
+            content: '1';
+        }
+    }
+
+    &__box:nth-child(2) &__icon {
+        &::after {
+            content: '2';
+        }
+    }
+
+    &__box:nth-child(3) &__icon {
+        &::after {
+            content: '3';
+        }
+    }
+
+    &__box:nth-child(4) &__icon {
+        &::after {
+            font-family: 'Font Awesome 5 Free';
+            content: '\f00c';
+            background-color: #fff;
+            color: $blue-second;
+        }
+    }
+
+    &__title {
+        font-size: $font-medium;
+        margin-top: 25px;
+    }
+
+    &__description {
+        font-size: $font-small;
+        padding: 10px;
+
+        @media (min-width:992px) {
+            padding: 20px 40px;
+        }
+    }
+
+    &__btn {
+        @include btn;
+        background-color: white;
+        color: black;
+        border-color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+}
