@@ -121,6 +121,7 @@
         &:hover {
             background-color: darken($blue, 10%);
             border-color: darken($blue, 10%);
+            color: white;
         }
 
         @media (min-width:768px) {
