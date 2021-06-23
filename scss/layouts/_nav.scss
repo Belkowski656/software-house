@@ -1,5 +1,6 @@
 .nav {
     max-width: 1920px;
+    z-index: 2;
 
     @media (min-width:1200px) {
         background-color: rgba(0, 0, 0, .2);
@@ -7,7 +8,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
 
         &::after {
             position: absolute;
@@ -37,6 +38,7 @@
         align-items: center;
         margin: 0 20px;
         padding: 15px 0;
+        z-index: 2;
     }
 
     &__line {
@@ -139,6 +141,14 @@
         transition: .3s linear;
         overflow-y: scroll;
 
+        @media (min-width:768px) and (orientation:portrait) {
+            width: 40vw;
+        }
+
+        @media (min-width:992px) {
+            width: 30vw;
+        }
+
         @media (min-width:1200px) {
             position: static;
             width: auto;
@@ -198,10 +208,13 @@
             }
         }
     }
+
+
 }
 
 .blure {
     transition: .3s linear;
+    cursor: pointer;
 }
 
 .blure--active {
@@ -213,4 +226,28 @@
     background-color: black;
     opacity: .5;
     z-index: 1;
+}
+
+.scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 15px;
+    z-index: 2;
+
+    .nav__phone {
+        color: black;
+    }
+
+    .nav__link {
+        color: black;
+    }
+
+    .nav__logo {
+        color: black;
+    }
 }
