@@ -5,7 +5,7 @@ const navBox = document.querySelector('.nav__box');
 
 burger.addEventListener('click', () => {
     menu.classList.toggle('nav__menu--active');
-    blure.classList.add('blure--active');
+    blure.classList.toggle('blure--active');
 });
 
 blure.addEventListener('click', () => {

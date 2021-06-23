@@ -10,7 +10,7 @@ const counting = (span, index) => {
     let value = 0;
     let increaseValue = 5;
 
-    if (index === 0 || index === 3) increaseValue = 10;
+    if (index === 0 || index === 3) increaseValue = 25;
     if (index === 1) increaseValue = 1;
     if (index === 2) increaseValue = 50;
 
