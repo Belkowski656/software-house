@@ -37,6 +37,7 @@
     &__box-left,
     &__box-right {
         flex-basis: 45%;
+        overflow: hidden;
     }
 
     &__h2 {

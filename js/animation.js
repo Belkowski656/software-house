@@ -58,6 +58,5 @@ gsap.from(testimonials.children, {
     scrollTrigger: {
         trigger: testimonials,
         start: 'center bottom',
-        markers: true,
     }
 })
