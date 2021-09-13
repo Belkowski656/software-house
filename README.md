@@ -7,7 +7,7 @@ This is a Softwarehouse landing page.
 
 ---
 
-[I'm an inline-style link](https://www.google.com)
+[Link to website](https://belkowski656.github.io/software-house/)
 
 ===============
 ## Setup
